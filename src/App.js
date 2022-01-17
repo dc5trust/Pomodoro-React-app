@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+//Import CSS Styles
+import './style/style.css';
+//import components
+import Timer from './components/Timer';
+import Setting from './components/Setting';
 
 function App() {
+
+ const [currentTime, setCurrentTime] = useState('01:40');
+ const [activeTimer, setActiveTimer] = useState(false);
+ const [pausedTime, setPausedTime] = useState();
+ const [intervalStatus, setIntervalStatus] = useState();
+
+ const [duration, setDuration] = useState();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Timer currentTime={currentTime} setCurrentTime={setCurrentTime} activeTimer={activeTimer} setActiveTimer={setActiveTimer} intervalStatus={intervalStatus} setIntervalStatus={setIntervalStatus} pausedTime={pausedTime} setPausedTime={setPausedTime}/>
+      <Setting />
     </div>
+
   );
 }
 

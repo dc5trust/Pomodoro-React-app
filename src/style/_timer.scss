@@ -1,0 +1,43 @@
+.pomodoro-container {
+  background-color: grey;
+  height: 55%;
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pomodoro-title {
+  font-size: 4rem;
+}
+
+.fa-user-cog {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .timer-current-time {
+    font-size: 5.2rem;
+  }
+
+  .far {
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}
+
+/* Progress Bar styling*/
+
+.progress-bar {
+  height: 250px;
+  width: 250px;
+  background-color: white;
+  border-radius: 50%;
+}
