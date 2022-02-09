@@ -163,7 +163,6 @@ const Timer = ({currentTime, setCurrentTime, activeTimer, setActiveTimer, interv
       longSessionRef.current.style.backgroundColor = 'transparent';
       studySessionRef.current.style.backgroundColor = 'transparent';
       shortSessionRef.current.style.backgroundColor = `${mainColor}`;
-      console.log(mainColor);
       //box shadow
       longSessionRef.current.style.boxShadow = 'none';
       studySessionRef.current.style.boxShadow = 'none';

@@ -1,6 +1,6 @@
 .pomodoro-container {
   // background-color: grey;
-  height: 90vh;
+  height: 100vh;
   width: 90vh;
   display: flex;
   justify-content: space-around;
@@ -11,9 +11,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 25rem;
+    width: 28rem;
     height: 3rem;
-    background: #376996;
+    background: #000000;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     border-radius: 25px;
     color: white;
@@ -47,14 +47,15 @@
 }
 
 .pomodoro-title {
-  font-size: 5rem;
-  color: white;
+  font-size: 7rem;
+  color: black;
+  font-family: "Dancing Script", cursive;
 }
 //settings button
 .fa-user-cog {
   cursor: pointer;
   font-size: 2rem;
-  color: white;
+  color: black;
 }
 
 .timer-container {
@@ -64,7 +65,7 @@
   flex-direction: column;
   height: 300px;
   width: 300px;
-  background: #1d3461;
+  background: #000000;
   border-radius: 50%;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   color: white;
@@ -82,7 +83,7 @@
 .timer-outer-container {
   height: 320px;
   width: 320px;
-  background: #376996;
+  background: #414141;
   border-radius: 50%;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   display: flex;
@@ -92,13 +93,14 @@
 
 .info-background {
   position: absolute;
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   display: none;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 10;
+  overflow: hidden;
 
   .modal-box {
     height: 32rem;
@@ -113,12 +115,12 @@
 
     .fa-info-circle {
       font-size: 4.7rem;
-      color: rgb(67, 142, 240);
+      color: rgb(0, 0, 0);
     }
 
     .demo-info {
       text-align: center;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: grey;
     }
 
@@ -160,12 +162,13 @@
   flex-direction: column;
   height: 5vh;
   // width: 15%;
-  color: white;
+  color: black;
   font-size: 1.3rem;
 
   .fa-info-circle {
     font-size: 1.7rem;
     cursor: pointer;
+    color: black;
   }
 }
 
@@ -186,7 +189,7 @@
 //mobile
 @media only screen and (max-width: 860px) {
   .pomodoro-title {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 
   .study-session,
@@ -206,6 +209,9 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .pomodoro-title {
+    font-size: 4.5rem;
+  }
   .pomodoro-container {
     width: 100%;
     justify-content: space-between;
@@ -213,6 +219,25 @@
     .title-container {
       width: 18rem;
       height: 3rem;
+    }
+  }
+
+  .info-background {
+    overflow: hidden;
+
+    .modal-box {
+      height: 29rem;
+      width: 22rem;
+
+      .demo-info {
+        font-size: 0.8rem;
+      }
+      .demo-time-span {
+        font-size: 1rem;
+      }
+      .disable-span {
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -239,5 +264,24 @@
 
   .fas {
     font-size: 1.8rem;
+  }
+
+  .info-background {
+    overflow: hidden;
+
+    .modal-box {
+      height: 28rem;
+      width: 17rem;
+
+      .demo-info {
+        font-size: 0.8rem;
+      }
+      .demo-time-span {
+        font-size: 1rem;
+      }
+      .disable-span {
+        font-size: 1rem;
+      }
+    }
   }
 }

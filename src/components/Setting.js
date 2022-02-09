@@ -14,28 +14,27 @@ const Setting = ({settingsBtnRef, modalBoxRef, pomodoro, setPomodoro, shortBreak
         document.body.style.fontFamily = `${mainFont}`;
         applyBtnRef.current.style.fontFamily = `${mainFont}`;
         setDemoStatus(false);
-        //check if pomodoro has value
+        //font Color Selectors 
+       
         
+        //check if Pomodoro, short Break, Long Break have new values 
         if(pomodoroRef.current.value){
+            //multiply by 60
             pomodoroSeconds = 60 * pomodoroRef.current.value;
             setPomodoro(pomodoroSeconds);
-            prev = pomodoroRef.current.value;
-            console.log(prev);
         }
         if(shortBreakRef.current.value){
             //multiply by 60
             shortBreakTemp = 60 * shortBreakRef.current.value;
-            console.log(shortBreakTemp);
             setShortBreak(shortBreakTemp);
         }
         if(longBreakRef.current.value){
             //multiply by 60
             longBreakTemp = 60 * longBreakRef.current.value;
-            console.log(longBreakTemp)
             setLongBreak(longBreakTemp);
         }
         
-        //update colors upon clicking 'APPLY' within settings 
+        //Pause Timer Upon Applying ANY settings 
         if(activeTimer){
             setActiveTimer(activeTimer = false);
             setIntervalStatus(intervalStatus = clearInterval(intervalStatus));
@@ -50,7 +49,6 @@ const Setting = ({settingsBtnRef, modalBoxRef, pomodoro, setPomodoro, shortBreak
                 setCurrentTime(()=>formatNumbers(pomodoroSeconds));
                 setCycle(2);
                 setPercentage(100);
-                console.log('studysession hello')
             }else return 
             
         }else if(shortSessionRef.current.style.backgroundColor !== 'transparent'){
@@ -132,19 +130,20 @@ const Setting = ({settingsBtnRef, modalBoxRef, pomodoro, setPomodoro, shortBreak
     }
 
     const colorHandler = (e)=>{
+        
         if(e.target.classList.contains('color-one')){
             colorOneRef.current.classList.add('fa-check');
             colorTwoRef.current.classList.remove('fa-check');
             colorThreeRef.current.classList.remove('fa-check');
             //change color of studybtn, applybtn & circle props
-            setMainColor('rgb(67, 142, 240)')
+            setMainColor('rgb(67, 142, 240)');
             
         }else if (e.target.classList.contains('color-two')){
             colorOneRef.current.classList.remove('fa-check');
             colorTwoRef.current.classList.add('fa-check');
             colorThreeRef.current.classList.remove('fa-check');
             //change color of studybtn, applybtn & circle props
-            setMainColor('#95ABC6')
+            setMainColor('#95ABC6');
         }else if(e.target.classList.contains('color-three')){
             colorOneRef.current.classList.remove('fa-check');
             colorTwoRef.current.classList.remove('fa-check');

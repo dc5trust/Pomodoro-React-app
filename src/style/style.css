@@ -7,8 +7,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #5888b1;
-  background: radial-gradient(circle, #4d7ba4 45%, rgba(2, 35, 36, 0.995) 100%);
 }
 
 html {
@@ -26,11 +24,10 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  scroll-behavior: auto;
 }
 
 .pomodoro-container {
-  height: 90vh;
+  height: 100vh;
   width: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,9 +53,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 25rem;
+  width: 28rem;
   height: 3rem;
-  background: #376996;
+  background: #000000;
   -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   border-radius: 25px;
@@ -94,14 +91,15 @@ html {
 }
 
 .pomodoro-title {
-  font-size: 5rem;
-  color: white;
+  font-size: 7rem;
+  color: black;
+  font-family: "Dancing Script", cursive;
 }
 
 .fa-user-cog {
   cursor: pointer;
   font-size: 2rem;
-  color: white;
+  color: black;
 }
 
 .timer-container {
@@ -120,7 +118,7 @@ html {
           flex-direction: column;
   height: 300px;
   width: 300px;
-  background: #1d3461;
+  background: #000000;
   border-radius: 50%;
   -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -139,7 +137,7 @@ html {
 .timer-outer-container {
   height: 320px;
   width: 320px;
-  background: #376996;
+  background: #414141;
   border-radius: 50%;
   -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -156,7 +154,7 @@ html {
 
 .info-background {
   position: absolute;
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   display: none;
   -webkit-box-pack: center;
@@ -167,6 +165,7 @@ html {
           align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 10;
+  overflow: hidden;
 }
 
 .info-background .modal-box {
@@ -190,12 +189,12 @@ html {
 
 .info-background .modal-box .fa-info-circle {
   font-size: 4.7rem;
-  color: #438ef0;
+  color: black;
 }
 
 .info-background .modal-box .demo-info {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: grey;
 }
 
@@ -241,13 +240,14 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 5vh;
-  color: white;
+  color: black;
   font-size: 1.3rem;
 }
 
 .info-container .fa-info-circle {
   font-size: 1.7rem;
   cursor: pointer;
+  color: black;
 }
 
 /* Progress Bar styling*/
@@ -275,7 +275,7 @@ html {
 
 @media only screen and (max-width: 860px) {
   .pomodoro-title {
-    font-size: 4rem;
+    font-size: 6rem;
   }
   .study-session,
   .short-break-session,
@@ -294,6 +294,9 @@ html {
 }
 
 @media only screen and (max-width: 480px) {
+  .pomodoro-title {
+    font-size: 4.5rem;
+  }
   .pomodoro-container {
     width: 100%;
     -webkit-box-pack: justify;
@@ -303,6 +306,22 @@ html {
   .pomodoro-container .title-container {
     width: 18rem;
     height: 3rem;
+  }
+  .info-background {
+    overflow: hidden;
+  }
+  .info-background .modal-box {
+    height: 29rem;
+    width: 22rem;
+  }
+  .info-background .modal-box .demo-info {
+    font-size: 0.8rem;
+  }
+  .info-background .modal-box .demo-time-span {
+    font-size: 1rem;
+  }
+  .info-background .modal-box .disable-span {
+    font-size: 1rem;
   }
 }
 
@@ -324,6 +343,22 @@ html {
   }
   .fas {
     font-size: 1.8rem;
+  }
+  .info-background {
+    overflow: hidden;
+  }
+  .info-background .modal-box {
+    height: 28rem;
+    width: 17rem;
+  }
+  .info-background .modal-box .demo-info {
+    font-size: 0.8rem;
+  }
+  .info-background .modal-box .demo-time-span {
+    font-size: 1rem;
+  }
+  .info-background .modal-box .disable-span {
+    font-size: 1rem;
   }
 }
 
@@ -369,7 +404,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .settings-background {
   position: absolute;
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   display: none;
   -webkit-box-pack: center;
@@ -395,7 +430,7 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 600px;
   width: 600px;
   background-color: white;
-  border-radius: 10%;
+  border-radius: 3%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
