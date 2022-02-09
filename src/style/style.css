@@ -1,14 +1,14 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #1d3461;
-  overflow: hidden;
+  background: #5888b1;
+  background: radial-gradient(circle, #5888b1 45%, #193ce6 100%);
 }
 
 html {
@@ -16,7 +16,7 @@ html {
 }
 
 .App {
-  height: 101vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,8 +170,8 @@ html {
 }
 
 .info-background .modal-box {
-  height: 30rem;
-  width: 25rem;
+  height: 32rem;
+  width: 27rem;
   border-radius: 10%;
   background-color: white;
   display: -webkit-box;
@@ -196,6 +196,11 @@ html {
 .info-background .modal-box .demo-info {
   text-align: center;
   font-size: 1.1rem;
+  color: grey;
+}
+
+.info-background .modal-box .demo-title {
+  text-align: center;
 }
 
 .info-background .modal-box .accept-btn {
@@ -218,7 +223,7 @@ html {
 }
 
 .info-background .modal-box .disable-span {
-  color: #f91235;
+  color: #fe4c67;
   font-size: 1.3rem;
 }
 
@@ -374,6 +379,7 @@ input[type="number"]::-webkit-outer-spin-button {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
 }
 
 .settings-background input {

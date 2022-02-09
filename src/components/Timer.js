@@ -133,9 +133,11 @@ const Timer = ({currentTime, setCurrentTime, activeTimer, setActiveTimer, interv
   
   function studyModeHandler (e){
     
-
+    //MAKE SURE YOU PAUSE THESE INDIVIDUALLY! 
     if(e.target.classList.value === 'study-session'){
       setPausedTime('');
+      setActiveTimer(activeTimer = false);
+      setIntervalStatus(intervalStatus = clearInterval(intervalStatus));
       setTime(pomodoro);
       setOriginalTime(pomodoro);
       setCurrentTime(()=>formatNumbers(pomodoro));
@@ -151,6 +153,8 @@ const Timer = ({currentTime, setCurrentTime, activeTimer, setActiveTimer, interv
       shortSessionRef.current.style.boxShadow = 'none';
     }else if (e.target.classList.value === 'short-break-session'){
       setPausedTime('');
+      setActiveTimer(activeTimer = false);
+      setIntervalStatus(intervalStatus = clearInterval(intervalStatus));
       setTime(shortBreak);
       setOriginalTime(shortBreak);
       setCurrentTime(()=>formatNumbers(shortBreak));
@@ -166,6 +170,8 @@ const Timer = ({currentTime, setCurrentTime, activeTimer, setActiveTimer, interv
       shortSessionRef.current.style.boxShadow = '0 20px 30px rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.15)';
     }else if (e.target.classList.value === 'long-break-session'){
       setPausedTime('');
+      setActiveTimer(activeTimer = false);
+      setIntervalStatus(intervalStatus = clearInterval(intervalStatus));
       setTime(longBreak);
       setOriginalTime(longBreak);
       setCurrentTime(()=>formatNumbers(longBreak));
@@ -202,7 +208,9 @@ const Timer = ({currentTime, setCurrentTime, activeTimer, setActiveTimer, interv
        <div className="info-background" ref={infoModalRef}>
          <div className="modal-box">
           <i className="fas fa-info-circle" onClick={infoHandler}></i>
-          <h1 className='demo-title'>Demo</h1>
+          <h1 className='demo-title'>Demo in
+          <br/>
+          Seconds</h1>
            
           <p className='demo-info'>
               Pomodoro:  <span className='demo-time-span'>10 Seconds </span>
@@ -214,7 +222,7 @@ const Timer = ({currentTime, setCurrentTime, activeTimer, setActiveTimer, interv
               <br/>
               <span className='disable-span'>Disable by changing Settings</span>
           </p>
-          <button className='accept-btn' onClick={acceptBtnInfo}>Sounds Good!</button>
+          <button className='accept-btn' onClick={acceptBtnInfo}>Acknowledged</button>
          </div>
        </div>
        <div className="info-container">

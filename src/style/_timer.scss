@@ -101,8 +101,8 @@
   z-index: 10;
 
   .modal-box {
-    height: 30rem;
-    width: 25rem;
+    height: 32rem;
+    width: 27rem;
     border-radius: 10%;
     background-color: white;
     display: flex;
@@ -116,12 +116,14 @@
       color: rgb(67, 142, 240);
     }
 
-    .demo-title {
-      // padding: 1rem;
-    }
     .demo-info {
       text-align: center;
       font-size: 1.1rem;
+      color: grey;
+    }
+
+    .demo-title {
+      text-align: center;
     }
 
     .accept-btn {
@@ -143,7 +145,8 @@
     }
 
     .disable-span {
-      color: rgb(249, 18, 53);
+      color: rgb(254, 76, 103);
+      // color: grey;
       font-size: 1.3rem;
       // text-decoration: underline;
     }

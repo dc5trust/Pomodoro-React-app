@@ -1,12 +1,16 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #1d3461;
-  overflow: hidden;
+  background: rgb(88, 136, 177);
+  background: radial-gradient(
+    circle,
+    rgba(88, 136, 177, 1) 45%,
+    rgba(25, 60, 230, 1) 100%
+  );
 }
 
 html {
@@ -14,7 +18,7 @@ html {
 }
 
 .App {
-  height: 101vh;
+  height: 100vh;
   // width: 100vw;
   display: flex;
   justify-content: center;
