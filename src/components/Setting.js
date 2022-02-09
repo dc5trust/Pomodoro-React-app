@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react';
 
-const Setting = ({settingsBtnRef, modalBoxRef, pomodoro, setPomodoro, shortBreak, setShortBreak, longBreak, setLongBreak, pomodoroRef, shortBreakRef, longBreakRef, time, setTime, currentTime, setCurrentTime, setPausedTime, pauseTime, setIntervalStatus, intervalStatus, setActiveTimer, activeTimer, fontOneRef, fontTwoRef, fontThreeRef, colorOneRef, colorTwoRef, colorThreeRef, applyBtnRef, mainColor, setMainColor, longSessionRef, studySessionRef, shortSessionRef, timeColorRef, setPercentage, cycle, mainFont, setMainFont, setCycle, setOriginalTime, originalTime})=>{
+const Setting = ({settingsBtnRef, modalBoxRef, pomodoro, setPomodoro, shortBreak, setShortBreak, longBreak, setLongBreak, pomodoroRef, shortBreakRef, longBreakRef, time, setTime, currentTime, setCurrentTime, setPausedTime, pauseTime, setIntervalStatus, intervalStatus, setActiveTimer, activeTimer, fontOneRef, fontTwoRef, fontThreeRef, colorOneRef, colorTwoRef, colorThreeRef, applyBtnRef, mainColor, setMainColor, longSessionRef, studySessionRef, shortSessionRef, timeColorRef, setPercentage, cycle, mainFont, setMainFont, setCycle, setOriginalTime, originalTime, setDemoStatus, demoStatus})=>{
 
     let pomodoroSeconds, shortBreakTemp, longBreakTemp, minutes, seconds, prev;
 
@@ -13,7 +13,7 @@ const Setting = ({settingsBtnRef, modalBoxRef, pomodoro, setPomodoro, shortBreak
         applyBtnRef.current.style.backgroundColor = `${mainColor}`;
         document.body.style.fontFamily = `${mainFont}`;
         applyBtnRef.current.style.fontFamily = `${mainFont}`;
-
+        setDemoStatus(false);
         //check if pomodoro has value
         
         if(pomodoroRef.current.value){
@@ -171,15 +171,15 @@ const Setting = ({settingsBtnRef, modalBoxRef, pomodoro, setPomodoro, shortBreak
                 
                     <div className="study-container">
                         <label htmlFor='study'>Pomodoro</label>
-                        <input ref={pomodoroRef} type="number" name="study" min="5" max="60" step='5' placeholder={pomodoro}  />
+                        <input ref={pomodoroRef} type="number" name="study" min="5" max="60" step='5' placeholder={pomodoro} defaultValue={25}/>
                     </div>
                     <div className="short-break-container">
                         <label htmlFor='short-break'>Short Break</label>
-                        <input ref={shortBreakRef} type="number" name="short-break" min="5" max="15" step='5' placeholder={shortBreak} />
+                        <input ref={shortBreakRef} type="number" name="short-break" min="5" max="15" step='5' placeholder={shortBreak} defaultValue={5}/>
                     </div>
                     <div className="long-break-container">
                         <label htmlFor='short-break'>Long Break</label>
-                        <input ref={longBreakRef} type="number" name="short-break" min="10" max="30" step='10' placeholder={longBreak} />
+                        <input ref={longBreakRef} type="number" name="short-break" min="10" max="30" step='10' placeholder={longBreak} defaultValue={10}/>
                     </div>
 
                 </div>

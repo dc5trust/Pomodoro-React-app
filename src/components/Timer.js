@@ -226,7 +226,7 @@ const Timer = ({currentTime, setCurrentTime, activeTimer, setActiveTimer, interv
          </div>
        </div>
        <div className="info-container">
-       Demo 
+       Demo Mode {demoStatus ? 'ON' : 'OFF'}
       <i className="fas fa-info-circle" onClick={infoHandler}></i>
       
        </div>

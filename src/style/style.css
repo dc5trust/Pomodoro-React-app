@@ -8,7 +8,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background: #5888b1;
-  background: radial-gradient(circle, #5888b1 45%, #193ce6 100%);
+  background: radial-gradient(circle, #4d7ba4 45%, rgba(2, 35, 36, 0.995) 100%);
 }
 
 html {
