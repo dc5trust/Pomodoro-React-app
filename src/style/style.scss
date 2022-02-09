@@ -5,10 +5,13 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #1d3461;
+  overflow: hidden;
 }
 
 .App {
   height: 100vh;
+  // width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
