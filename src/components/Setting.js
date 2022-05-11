@@ -92,7 +92,6 @@ const Setting = ({settingsBtnRef, modalBoxRef, pomodoro, setPomodoro, shortBreak
       }
 
     const fontHandler = (e) =>{
-        // console.log(e.target.classList[0])
         if(e.target.classList.contains('font-one')){
             //highlight selected font icon 
             fontOneRef.current.style.color = 'white';

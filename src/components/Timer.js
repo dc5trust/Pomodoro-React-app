@@ -10,14 +10,15 @@ const Timer = ({currentTime, setCurrentTime, activeTimer, setActiveTimer, interv
   // time variable 
   let startTime, minutes, seconds, totalTime, originalTime;
   let percent = 0;
-
+  
   const startTimer = ()=>{
     if(pausedTime){
+      // setTime()
       time = pausedTime;
     }
     if(activeTimer === true){
       totalTime = time - (((Date.now() - startTime) / 1000) | 0);
-      console.log('running..');
+      
       if(totalTime === 0){
         setCurrentTime('0:00');
         pauseTimer();
@@ -50,7 +51,6 @@ const Timer = ({currentTime, setCurrentTime, activeTimer, setActiveTimer, interv
   }
 
   function pauseTimer (){
-    console.log('...paused')
     setActiveTimer(activeTimer = false);
     setIntervalStatus(intervalStatus = clearInterval(intervalStatus));
   };
@@ -77,12 +77,9 @@ const Timer = ({currentTime, setCurrentTime, activeTimer, setActiveTimer, interv
   function pomodoroCycle (){
     //increase cycle by one but beginning at 2 
     setCycle((prev)=> prev+1);
-    console.log('cycle',cycle);
-    console.log('pausedTime',pausedTime);
     setPausedTime(0);
     //if cycle equals 3 return a long break
     if(cycle % 2 === 1){
-      console.log('running regular study session');
       setCurrentTime(formatNumbers(pomodoro));
       setTime(()=>pomodoro);
       longSessionRef.current.style.backgroundColor = 'transparent';
@@ -97,7 +94,6 @@ const Timer = ({currentTime, setCurrentTime, activeTimer, setActiveTimer, interv
       if(cycle % 6 === 0){
         setTime(()=>longBreak);
         setCurrentTime(formatNumbers(longBreak));
-        console.log('long break is running');
         longSessionRef.current.style.backgroundColor = `${mainColor}`;
         studySessionRef.current.style.backgroundColor = 'transparent';
         shortSessionRef.current.style.backgroundColor = 'transparent';
@@ -110,11 +106,9 @@ const Timer = ({currentTime, setCurrentTime, activeTimer, setActiveTimer, interv
       }else{
         setTime(()=>shortBreak);
         setCurrentTime(formatNumbers(shortBreak));
-        console.log('short break is running...');
         longSessionRef.current.style.backgroundColor = 'transparent';
         studySessionRef.current.style.backgroundColor = 'transparent';
         shortSessionRef.current.style.backgroundColor = `${mainColor}`;
-        console.log(mainColor);
         //box shadow
         longSessionRef.current.style.boxShadow = 'none';
         studySessionRef.current.style.boxShadow = 'none';
