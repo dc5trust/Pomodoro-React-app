@@ -1,5 +1,5 @@
 # Pomodoro Timer React App 
-## A pomodoro timer is an affective method of studying for long periods of time. User May set specific study times along with short or longer break times. Fully customizable from colors, fonts and set times. 
+## A pomodoro timer is an effective study strategy for many students. The strategy is rather simple, study for a set period of time followed by a short break and then a longer break. Basically, never working for more than a set specific time without first getting a break. 
 
 ## Link to Web Application
 
