@@ -1,8 +1,8 @@
 # Pomodoro Timer React App 
-## A pomodoro timer is an effective study strategy for many students. The strategy is rather simple, study for a set period of time followed by a short break and then a longer break. Basically, never working for more than a set specific time without first receiving a break. 
+## A pomodoro timer allows you to set study & break durations. After the durations have been set, the user will cycle between studying and break times. 
 
 ## Link to Web Application
-
+https://pomodoro-timer-react-app.netlify.app
 
 ## Build With
 <ul>
@@ -48,6 +48,10 @@ To Start Server:
 <img width="389" alt="Screen Shot 2022-05-11 at 7 08 45 PM" src="https://user-images.githubusercontent.com/61483178/167978185-bb97e7fb-49b4-4dd8-9e8a-68451d1e1e49.png">
 
 ## Roadmap
+<ul>
+  <li>Add total cycles completed</li>
+  <li>reset cycles each day</li>
+</ul>
 
 
 
